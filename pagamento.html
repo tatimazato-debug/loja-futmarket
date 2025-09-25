@@ -73,7 +73,7 @@
     document.getElementById('price').textContent = price;
 
     async function criarCheckoutPix(valor, descricao) {
-      const res = await fetch("/api/pix-checkout", {
+      const res = await fetch("/api/pix", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ amount: valor, description: descricao })
