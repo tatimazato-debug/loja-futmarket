@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escolha sua Plataforma - FUTMARKET BR</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background: #111;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+      width: 250px;
+      padding: 20px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+    }
+    .card img {
+      width: 120px;
+      margin-bottom: 15px;
+    }
+    .card h2 {
+      font-size: 20px;
+      margin: 0;
+    }
+    footer {
+      margin-top: 50px;
+      padding: 15px;
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    FUTMARKET BR - Escolha sua Plataforma
+  </header>
+
+  <div class="container">
+    <h1>Selecione sua Plataforma</h1>
+    <div class="cards">
+      <div class="card" onclick="window.location.href='metodo.html'">
+        <img src="playstation.png" alt="Playstation">
+        <h2>Playstation</h2>
+      </div>
+
+      <div class="card" onclick="window.location.href='metodo.html'">
+        <img src="xbox.png" alt="Xbox">
+        <h2>Xbox</h2>
+      </div>
+
+      <div class="card" onclick="window.location.href='metodo.html'">
+        <img src="pc.png" alt="PC">
+        <h2>PC</h2>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    FUTMARKET BR © 2025 - Todos os direitos reservados
+  </footer>
+</body>
+</html>

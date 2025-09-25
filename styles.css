@@ -1,0 +1,254 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  background: #111;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo-image {
+  height: 40px;
+}
+.logo-text h1 {
+  font-size: 22px;
+  color: #39ff14; /* pequeno destaque no logo */
+  letter-spacing: 1px;
+}
+
+/* Header buttons */
+.header-buttons {
+  margin-left: auto;
+  display: flex;
+  gap: 12px;
+}
+.login-btn, .whatsapp-btn {
+  background: #fff;
+  color: #000;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.login-btn:hover, .whatsapp-btn:hover { opacity: 0.85; }
+
+/* Banner full-width */
+.banner {
+  width: 100%;
+  background: #000;
+  text-align: center;
+  padding: 30px 0;
+}
+.banner-image {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 40px 0 60px;
+}
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.price-tag {
+  color: #39ff14;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.hero-subtitle { color: #ddd; margin-bottom: 18px; }
+.badge { background: #fff; color: #000; padding: 8px 18px; border-radius: 25px; font-weight: 700; display: inline-block; margin-bottom: 18px; }
+
+/* CTA animated neon (pulo + brilho) */
+.hero-cta { margin-top: 8px; }
+.cta-button {
+  background-color: #39ff14;
+  color: #000;
+  border: none;
+  padding: 15px 42px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+
+  animation: bounce 1.5s infinite, glow 1.8s infinite alternate;
+  box-shadow: 0 0 10px rgba(57,255,20,0.7);
+}
+.cta-button:hover {
+  animation: none;
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px rgba(57,255,20,0.95);
+}
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes glow {
+  from { box-shadow: 0 0 8px rgba(57,255,20,0.5); }
+  to { box-shadow: 0 0 26px rgba(57,255,20,0.95), 0 0 40px rgba(57,255,20,0.6); }
+}
+
+/* "Por que comprar" section */
+.why {
+  padding: 60px 0;
+  background: #0b0b0b;
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+/* Left artwork: usa a mesma coins.png como background e aplica corte diagonal */
+.why-left {
+  background-image: url('coins.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 520px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  /* corte diagonal na borda direita */
+  -webkit-clip-path: polygon(0 0, 100% 0, 82% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 82% 100%, 0% 100%);
+}
+
+/* Right column com título e cards */
+.why-right h2 {
+  font-size: 2rem;
+  margin-bottom: 18px;
+  color: #fff;
+}
+.why-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.why-card {
+  background: #0f0f0f;
+  border: 1px solid rgba(255,255,255,0.04);
+  padding: 18px;
+  border-radius: 12px;
+  color: #ddd;
+}
+.why-card h3 {
+  color: #39ff14;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
+
+/* Features (mantive suas classes originais) */
+.features {
+  padding: 60px 0;
+  background: #0a0a0a;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+.feature-card {
+  background: #111;
+  padding: 28px;
+  border-radius: 12px;
+  border: 1px solid #222;
+  text-align: center;
+}
+.feature-card h3 { color: #fff; margin-bottom: 10px; }
+.feature-card p { color: #bbb; }
+
+/* FAQ */
+.faq { padding: 60px 0; background: #0a0a0a; }
+.faq h2 { text-align:center; margin-bottom:20px; color: #fff; }
+.faq-item { background:#111; border-radius:10px; padding:18px; margin-bottom:12px; border:1px solid #222; }
+.faq-question { color:#fff; font-weight:600; margin-bottom:6px; }
+.faq-answer { color:#ccc; }
+
+/* Reviews */
+.reviews { padding: 60px 0; background: #0a0a0a; color: #fff; }
+.reviews h2 { text-align:center; margin-bottom:18px; }
+.reviews-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:18px; margin-top:20px; }
+.review-card { background:#111; padding:16px; border-radius:10px; border:1px solid #222; color:#ddd; }
+.review-header { display:flex; justify-content:space-between; margin-bottom:8px; }
+
+/* TrustPilot button style */
+.trust-section { text-align:center; margin-top:22px; }
+.trust-btn { background:#fff; color:#000; padding:10px 18px; border-radius:8px; text-decoration:none; font-weight:600; }
+
+/* Footer */
+.footer { background:#111; padding:30px 0; text-align:center; color:#ccc; border-top:1px solid #222; }
+.footer .whatsapp-footer { background:#39ff14; color:#000; padding:10px 18px; border-radius:8px; text-decoration:none; font-weight:700; }
+
+/* WhatsApp float (ajustado para neon) */
+.whatsapp-float {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  background: #39ff14;
+  color: #000;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  text-decoration: none;
+  box-shadow: 0 6px 22px rgba(57,255,20,0.35);
+  z-index: 1200;
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+  .why-grid { grid-template-columns: 1fr; gap: 18px; }
+  .why-left { min-height: 380px; -webkit-clip-path:none; clip-path:none; border-radius:10px; background-position:center top; }
+  .banner-image { max-height: 420px; }
+}
+@media (max-width: 640px) {
+  .hero-title { font-size: 2rem; }
+  .cta-button { padding: 12px 22px; font-size: 1rem; }
+}

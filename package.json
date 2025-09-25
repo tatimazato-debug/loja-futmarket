@@ -1,0 +1,23 @@
+{
+  "name": "futmarketbr",
+  "version": "1.0.0",
+  "description": "Checkout PIX integrado com Vercel",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-next": "^13.4.19"
+  },
+  "private": true
+}

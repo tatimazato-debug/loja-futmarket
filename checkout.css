@@ -1,0 +1,107 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #0a0a2a;
+  color: #fff;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Header */
+.checkout-header {
+  background: #111;
+  padding: 15px 0;
+}
+.checkout-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-image {
+  height: 40px;
+}
+.logo h1 {
+  font-size: 20px;
+  color: #39ff14;
+}
+.header-buttons a {
+  background: #fff;
+  color: #000;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-left: 10px;
+  font-weight: 600;
+}
+.header-buttons a:hover { opacity: 0.85; }
+
+/* Checkout */
+.checkout {
+  text-align: center;
+  padding: 40px 20px;
+}
+.checkout h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Steps */
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.step {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #222;
+  font-weight: 600;
+  color: #bbb;
+}
+.step.active {
+  background: #39ff14;
+  color: #000;
+}
+
+/* Platforms */
+.platforms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.platform-card {
+  background: #111;
+  padding: 30px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.2s;
+  border: 2px solid transparent;
+}
+.platform-card img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+.platform-card:hover {
+  border-color: #39ff14;
+  transform: translateY(-4px);
+  box-shadow: 0 0 14px rgba(57,255,20,0.4);
+}
